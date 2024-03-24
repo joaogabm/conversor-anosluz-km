@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+CONVERSOR DE QUILÔMETROS PARA ANOS LUZ (e vice-versa)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Este projeto permite converter distâncias entre quilômetros e anos luz. Ele é implementado em React JS e possui uma interface de usuário amigável.
 
-## Available Scripts
+BIBLIOTECAS UTILIZADAS
 
-In the project directory, you can run:
+- npm i react-icons
+- npm i styled-components
+- npm i react-router-dom
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---------- HEADER COMPONENT ----------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O arquivo "Header.jsx" contém a implementação principal do componente Header. Ele consiste em:
 
-### `npm test`
+- Importações: Importa os componentes React necessários, como useState, Menu, Login, FaBars e FaUser, bem como o componente Sidebar e seus respectivos estilos;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Função Header: Define o componente Header como uma função funcional. Ele contém o estado para controlar a visibilidade da barra lateral;
 
-### `npm run build`
+- Função showSidebar: Toggla a visibilidade da barra lateral ao ser chamada;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Renderização: Renderiza a estrutura do componente, incluindo o menu de navegação com o ícone de menu, a barra lateral (se estiver visível) e a seção de login com o ícone de usuário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O componente Sidebar.jsx é importado dentro do componente Header e é responsável por exibir um menu lateral quando acionado pelo usuário.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---------- SIDEBAR COMPONENT ----------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- O componente Sidebar é responsável por exibir um menu lateral na interface do usuário. Ele fornece acesso rápido a diferentes seções ou páginas do aplicativo.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ESTRUTURA DE ARQUIVOS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O arquivo "Sidebar.jsx" contém a implementação principal do componente Sidebar. Ele consiste em:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Importações: Importa os componentes necessários, como Container, Content e SidebarItem. Também importa os ícones de fechar, página inicial e outras páginas (por exemplo, FaTimes, FaHome, BsFillQuestionSquareFill);
 
-## Learn More
+- Função Sidebar: Define o componente Sidebar como uma função que aceita uma prop active para determinar se a barra lateral está aberta ou fechada. Contém a lógica para fechar a barra lateral e renderiza os itens de menu;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Renderização: Renderiza a estrutura do componente, incluindo o botão de fechar a barra lateral, os itens de menu e seus ícones.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O arquivo "SidebarItem.jsx" contém o componente "SidebarItem", que é responsável por renderizar cada item de menu na barra lateral. Ele consiste em:
 
-### Code Splitting
+- Importações: Importa o Container necessário para estilizar o item de menu;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Componente SidebarItem: Define o componente SidebarItem como uma função que aceita props Icon e Text. Renderiza o ícone e o texto do item de menu dentro do Container.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---------- CONVERSOR COMPONENT ----------
 
-### Making a Progressive Web App
+- O componente Conversor é responsável por converter distâncias entre quilômetros e anos luz, exibindo os resultados na interface do usuário e mantendo um histórico das últimas conversões realizadas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ESTRUTURA DE ARQUIVOS
 
-### Advanced Configuration
+O arquivo "Conversor.jsx" contém a implementação principal do componente Conversor. Ele consiste em:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Importações: Importa os componentes React necessários, como useState, Historico e Conversor.css. Também importa o arquivo CSS para estilização;
 
-### Deployment
+- Função Conversor: Define o componente Conversor como uma função funcional. Ele contém o estado para os valores de entrada (anosLuz e quilometros), resultados das conversões (resultadoAnosLuzParaKm e resultadoKmParaAnosLuz) e o histórico de conversões;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Funções de Conversão: Contém duas funções, ConverterAnosLuzParaKm e ConverterKmParaAnosLuz, para realizar as conversões entre quilômetros e anos luz. Cada função verifica a validade dos valores de entrada e realiza os cálculos necessários;
 
-### `npm run build` fails to minify
+- Função adicionarAoHistorico: É responsável por exibir o histórico das 3 últimas conversões realizadas. Ele recebe o histórico como uma prop e renderiza uma tabela com os dados de cada conversão;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Renderização: Renderiza a estrutura do componente, incluindo os campos de entrada para quilômetros e anos luz, botões de conversão, resultados das conversões e o componente de histórico.
