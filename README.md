@@ -2,11 +2,16 @@ CONVERSOR DE QUILÔMETROS PARA ANOS LUZ (e vice-versa)
 
 - Este projeto permite converter distâncias entre quilômetros e anos luz. Ele é implementado em React JS e possui uma interface de usuário amigável.
 
-BIBLIOTECAS UTILIZADAS
+COMO EXECUTAR O PROGRAMA
+
+1º - Certifique-se de que o Node.js está instalado na sua máquina;
+2º - Insira os comandos abaixo no terminal do seu VSCode para realizar a instação das bibliotecas utilizadas no projeto;
 
 - npm i react-icons
 - npm i styled-components
 - npm i react-router-dom
+
+3º - Insira o comando "npm start" no terminal para inicializar a aplicação.
 
 
 ---------- HEADER COMPONENT ----------
