@@ -4,7 +4,7 @@ CONVERSOR DE QUILÔMETROS PARA ANOS LUZ (e vice-versa)
 
 COMO EXECUTAR O PROGRAMA
 
-1º - Certifique-se de que o Node.js está instalado na sua máquina;
+1º - Certifique-se de que o Node.js está instalado na sua máquina; </br>
 2º - Insira os comandos abaixo no terminal do seu VSCode para realizar a instação das bibliotecas utilizadas no projeto;
 
 - npm i react-icons
